@@ -1,0 +1,14 @@
+<div role="form" class="col-xs-4 col-xs-offset-4">
+  <h2 class="text-center acct">Welcome back.</h2>
+  <br>
+  <!-- need flash messages here -->
+  <%= link_to "Not a member? Sign up!", new_user_path, class: "text-center" %>
+  <br>
+  <br>
+  <%= form_for @user , url: login_path do |f| %>
+    <%= f.text_field :email, placeholder: "email", class: "form-control", autofocus: true %>
+    <%= f.password_field :password, placeholder: "password", class: "form-control" %>
+    <%= f.submit "Go", class: "btn btn-primary form-control" %>
+    <%= link_to "Forgot your password?", new_password_path %>
+  <% end %>
+</div>

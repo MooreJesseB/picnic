@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Picnic</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body ng-app>
-  <div class="container">
-    <div ng-view>
-    </div>
-    <%= yield %>
-  </div>
-</body>
+  <head>
+    <title>Picnic</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+    <body ng-app="PicnicApp">
+
+      <div class="container">
+
+        <h1 class="text-center">Picnic</h1>
+        <br>
+      
+        <div ng-view>  
+        
+        </div>
+
+      </div>
+
+    </body>
+
 </html>

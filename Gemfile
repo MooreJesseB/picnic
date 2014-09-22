@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -39,3 +39,11 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'angular-rails-templates'
+
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'letter_opener'
+  # For storing keys in .env file
+  # gem 'dot-env'
+end
