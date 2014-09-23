@@ -15,6 +15,22 @@
  *= require_self
  */
 
+
 .site-button {
   width: 100;
+}
+
+.map-container {
+  height: 500px;
+}
+
+.map-footer {
+  height: 150px;
+}
+
+#map-canvas {
+  border: 5px solid black;
+  height: 100%;
+  width: 100%;
+  
 }
