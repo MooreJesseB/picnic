@@ -1,5 +1,6 @@
 class RequestsController < ApplicationController
   before_action :render_layout_if_format_html
+  before_action :getGooglekey
 
   def index
     render json: Request.all

@@ -2,9 +2,12 @@
 <html>
   <head>
     <title>Picnic</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWrANfILn42LmB9bs6mS1Uoe-KWSEaDv0"></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+    <%= include_gon %>
+
   </head>
 
     <body ng-app="PicnicApp">
@@ -19,7 +22,8 @@
         </div>
 
       </div>
-
+    
     </body>
+
 
 </html>

@@ -40,10 +40,12 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'angular-rails-templates'
 
+gem 'gon'
+
 group :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'letter_opener'
   # For storing keys in .env file
-  # gem 'dot-env'
+  gem 'dotenv-rails'
 end

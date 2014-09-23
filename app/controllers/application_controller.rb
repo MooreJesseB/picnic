@@ -9,12 +9,18 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
+    gon.currentUser = @current_user
   end
 
   def render_layout_if_format_html
     if request.format.symbol == :html
       render "layouts/application"
     end
+  end
+
+  def getGoogleKey
+    gon.googleKey = ENV["GOOGLE_MAPS_KEY"]
+    # render json: ENV["GOOGLE_MAPS_KEY"]
   end
   
 end

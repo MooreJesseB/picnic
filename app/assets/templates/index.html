@@ -1,0 +1,29 @@
+<div class="text-center col-xs-4 col-xs-offset-4">
+  <br>
+  <button ng-click="showLogin()" class="btn btn-primary site-button">Log in</button>
+  <button ng-click="showSignUp()" class="btn btn-primary site-button">Sign up</button>
+  <button ng-click="redirectToRequests()" class="btn btn-primary site-button">Explore</button>
+  <br>
+  <br>
+  <div role="form" ng-show="login">
+    <h3>Login</h3>
+    <br>
+    <form action"javascript:void(0)" ng-submit="createSession(user)">
+      <input type="text" ng-model="user.email" class="form-control focusOn" placeholder="email" autofocus required>
+      <input type="password" ng-model="user.password" class="form-control" placeholder="password" required>
+      <input type="submit" value="Go" class="form-control btn btn-primary">
+    </form>
+  </div>
+  <div role="form" ng-show="signUp">
+  <h3>Signup</h3>
+    <br>
+    <form action"javascript:void(0)" ng-submit="createUser(user)">
+      <input type="text" ng-model="user.name" class="form-control focusOn" placeholder="account name" autofocus required>
+      <input type="text" ng-model="user.email" class="form-control" placeholder="email">
+      <input type="text" ng-model="user.email_confirmation" class="form-control" placeholder="email validation" required>
+      <input type="password" ng-model="user.password" class="form-control" placeholder="password" required>
+      <input type="password" ng-model="user.password_confirmation" class="form-control" placeholder="password validation" required>
+      <input type="submit" value="Create account" class="form-control btn btn-primary">
+    </form>
+  </div>
+</div>

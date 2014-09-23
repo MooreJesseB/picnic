@@ -18,3 +18,13 @@
 .site-button {
   width: 100;
 }
+
+.angular-google-map-container { 
+  width: 500px;
+  height: 500px;
+}
+
+#map-canvas {
+  width: 50%;
+  hieght: 75%;
+}

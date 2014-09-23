@@ -6,7 +6,7 @@ class SitesCtrl
 
   constructor: (@scope, @http, @resource, @location, @Session, @User) ->
     console.log @User
-    @login = false
+    @login = true
     @signup = false
   
   createSession: (newSession) ->

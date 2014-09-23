@@ -15,5 +15,9 @@
 //= require angular.min
 //= require angular-route.min
 //= require angular-resource.min
+//= require lodash.underscore.min
+//= require angular-google-maps.min
 //= require bootstrap.min
 //= require_tree .
+//= require_tree ../templates
+// Creates javascript tags and calls initialize function
