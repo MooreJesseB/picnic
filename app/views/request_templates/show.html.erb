@@ -1,21 +1,20 @@
 <div>
-  <h1 class="text-center">Current Open Picnics:</h1>
+  <h1 class="text-center">{{title}}</h1>
   <br>  
-  <div class="map-container-large col-xs-9">
+  <div class="map-container col-xs-3">
     <div id="map-canvas"></div>  
     <div class="map-footer"></div>
   </div>
-  <div class="col-xs-3 request-sidebar text-center">
+  <!-- <div class="col-xs-3 request-sidebar text-center">
     <br>
     <div role="form">
-      <!-- <form action="javascript:void(0)" class="search" ng-submit="requests.codeAddress(address)"> -->
+      <form action="javascript:void(0)" class="search" ng-submit="requests.codeAddress(address)">
         <input type="text" id="searchTextField" class="form-control" ng-model="address" autofocus>
-        <!-- <input type="submit" value="search" class="form-control btm btn-primary"> -->
+        <input type="submit" value="search" class="form-control btm btn-primary">
       </form>
       <br>
     </div>
-    <h4 ng-hide="requests.markerPlace">{{requests.titleText}}</h4>
-    <button ng-hide="requests.markerPlace" ng-click="requests.markerPlaceMode()" class="btn btn-primary btn-side">New Picnic!</button>
+    <button ng-hide="requests.markerPlace" ng-click="requests.markerPlaceMode()" class="btn btn-primary btn-side">New Pic Request</button>
     <div ng-show="requests.markerPlace">
       <button ng-click="requests.cancelMarkerPlace()" class="btn btn-primary btn-side">Cancel Marker</button>
       <br>
@@ -30,8 +29,6 @@
         <input type="submit" value="Create Request!" class="btn btn-primary form-control">
       </form>
     </div>
-  </div>
+  </div> -->
   <br>
-  
-  
 </div>
