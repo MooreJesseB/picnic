@@ -18,6 +18,21 @@
 body {
   background-color: #002B42;
   color: #AFD1DB;
+  /*font-family: 'Carrois Gothic SC', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron {
+  /*border: 2px solid #DA932C;*/
+  background-color: #1D608E;
+}
+
+.title-header {
+  font-size: 60;
+}
+
+h1 {
+  font-size: 60;
 }
 
 .navbar-inverse .navbar-brand {
@@ -26,6 +41,10 @@ body {
 
 .navbar-inverse .navbar-nav>li>a {
   color: #AFD1DB;
+}
+
+.navbar {
+
 }
 
 p {
@@ -39,6 +58,8 @@ p {
 .navbar {
   background-color: #1D608E;
   border: none;
+  /*border-bottom: 2px solid #DA932C;*/
+  /*border: none;*/
   color: #AFD1DB;
 }
 
@@ -88,6 +109,7 @@ textarea {
 
 .site-button {
   width: 100;
+  margin: 5px;
 }
 
 .map-container-large {
