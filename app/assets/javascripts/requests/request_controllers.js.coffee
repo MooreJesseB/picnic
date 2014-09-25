@@ -20,6 +20,8 @@ class RequestsCtrl
     @markers = []
     @photos = []
     @newPhoto = {}
+    @currentPhoto = {}
+    @showPhotoNow = false
 
     # set up request resources
     @Request = @resource "/requests/:id.json"
@@ -149,14 +151,13 @@ class RequestsCtrl
       latLng = this.newLatLng(data.latitude, data.longitude)
       this.initMap()
       @map.setCenter {lat: data.latitude, lng: data.longitude} 
-      @map.setZoom(15)
+      @map.setZoom(17)
       @map.setBounds
       @addRequestMarker(data)
 
       #get photos for this request
       @Photo.query (data) =>
         @photos = data
-        console.log "data", data
 
   newLatLng: (lat, lng) ->
     latLng = new google.maps.LatLng(lat, lng)
@@ -200,7 +201,6 @@ class RequestsCtrl
 
       # create new request and send it to the server
       @Request.save newRequest, (data) =>
-        console.log "Got here"
         marker.requestId = data.id
         @markers.push marker
         marker.place = false
@@ -257,11 +257,9 @@ class RequestsCtrl
     google.maps.event.clearListeners @map, "click"
 
   createPhotoFromUrl: (photo) ->
-    console.log "photo", photo
     id = @routeParams.id
 
     @Photo.save {id: id, photo}, (data) =>
-      console.log "data", data
       @photos.push photo
       @newPhoto = {}
 
@@ -270,12 +268,19 @@ class RequestsCtrl
   createPhotoFromUpload: (photo) ->
 
   showPhotoSubmit: ->
-    console.log "Got here"
     @submitPhoto = true
     
 
   hidePhotoSubmit: ->
     @submitPhoto = false
+
+  showPhoto: (photo) ->
+    @showPhotoNow = true
+    @currentPhoto = photo
+
+  hidePhoto: ->
+    @showPhotoNow = false
+    @currentPhoto = null
 
 
 RequestControllers.controller("RequestsCtrl", 

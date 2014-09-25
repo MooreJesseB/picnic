@@ -1,6 +1,7 @@
 <div>
-  <h1 class="text-center">{{request.currentRequest.title}}</h1>
-  <br>  
+  <h1 class="text-center">{{requests.currentRequest.title}}</h1>
+  <br>
+  <br>
   <input type="hidden" id="searchTextField" class="form-control" ng-model="address" autofocus>
   <div class="map-container-small col-xs-3">
     <div id="map-canvas"></div>  
@@ -29,10 +30,17 @@
     <p>{{requests.currentRequest.description}}</p>    
   </div>
   <div class="col-xs-7 map-container-large">
-    <div ng-model="requests.photos" ng-repeat="photo in requests.photos">
+    <div ng-hide="requests.showPhotoNow" ng-model="requests.photos" ng-repeat="photo in requests.photos">
       <div class="photos inline-block col-xs-2">
-        <img class="inline-block" src="{{photo.imageurl}}">  
+        <button ng-click="requests.showPhoto(photo)" class="hideButton">
+          <img class="inline-block" src="{{photo.imageurl}}">
+        </button>
       </div>
+    </div>
+    <div class="max-width" ng-show="requests.showPhotoNow">
+      <button ng-click="requests.hidePhoto()" class="hideButton">
+        <img src="{{requests.currentPhoto.imageurl}}"
+      </button>
     </div>
   </div>
 </div>

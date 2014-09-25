@@ -20,6 +20,41 @@ body {
   color: #AFD1DB;
 }
 
+.navbar-inverse .navbar-brand {
+  color: #AFD1DB;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #AFD1DB;
+}
+
+p {
+  font-size: 16px;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #1D608E;
+  border: none;
+  color: #AFD1DB;
+}
+
+a {
+  color: #AFD1DB;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.hideButton {
+  background-color: rgba(0,0,0,0);
+  border: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -68,13 +103,13 @@ textarea {
 }
 
 .request-sidebar {
-  border: 3px solid #8F5100;
+  border: 3px solid #DA932C;
   height: 500px;
 }
 
 #map-canvas {
   border-radius: 8px;
-  border: 3px solid #8F5100;
+  border: 3px solid #DA932C;
   height: 100%;
   width: 100%;
   
