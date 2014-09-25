@@ -4,8 +4,11 @@ class Request
 
   constructor: (@http) ->
 
-  all: () ->
+  all: ->
     @http.get("/requests.json")
+
+  show: ->
+    @http.get("/requests/:id.json")
 
   create: (newRequest) ->
     @http.post("/requests.json", {request: newRequest})

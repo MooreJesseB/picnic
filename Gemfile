@@ -39,6 +39,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'angular-rails-templates'
+gem 'gon'
 
 group :development do
   gem 'pry'

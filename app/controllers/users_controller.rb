@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :render_layout_if_format_html
 
   def index
-    redirect_to root_path
+    render json: User.all
+  end
+
+  def show
+    render json: User.find_by_id(params[:id])
   end
 
   def create
@@ -30,10 +34,5 @@ class UsersController < ApplicationController
       # redirect_to @user
       render json: @user
     end
-  end
-
-  def show
-    @user = User.find_by_id(params[:id])
-    @current_user = current_user
   end
 end

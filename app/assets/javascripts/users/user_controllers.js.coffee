@@ -5,7 +5,7 @@ UserControllers = angular.module("UserControllers", [
 class UsersCtrl
 
   constructor: (@scope, @http, @resource, @location) ->
-    @user = @resource("/users/:id.json")
+    @User = @resource("/users/:id.json")
     @login = false
     @signup = false
 
@@ -14,8 +14,10 @@ class UsersCtrl
     console.log newUser
     console.log @User
     @Usercreate newUser, (data) =>
-      console.log data
-      @location.path "/requests"
+      console.log "data", data
+
+  show: (userId) ->
+    @User.get {userId: userId}
 
 
 UserControllers.controller("UsersCtrl", ["$scope", "$http", "$resource", "$location", UsersCtrl])

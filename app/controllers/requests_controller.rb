@@ -10,7 +10,7 @@ class RequestsController < ApplicationController
   end
 
   def show
-    render json: @request
+    render json: Request.find_by_id(params[:id])
   end
 
   def update

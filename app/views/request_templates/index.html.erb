@@ -1,4 +1,4 @@
-<div>
+<div ng-hide="requests.requestsShow">
   <h1 class="text-center">Current Open Picnics:</h1>
   <br>  
   <div class="map-container-large col-xs-9">
@@ -7,20 +7,19 @@
   </div>
   <div class="col-xs-3 request-sidebar text-center">
     <br>
-    <div role="form">
-      <!-- <form action="javascript:void(0)" class="search" ng-submit="requests.codeAddress(address)"> -->
-        <input type="text" id="searchTextField" class="form-control" ng-model="address" autofocus>
-        <!-- <input type="submit" value="search" class="form-control btm btn-primary"> -->
-      </form>
+    <div>
+      <!-- <img src="powered-by-google-on-white.png" alt="google logo"> -->
+      <input type="text" id="searchTextField" class="form-control" ng-model="address" autofocus>
       <br>
     </div>
-    <h4 ng-hide="requests.markerPlace">{{requests.titleText}}</h4>
-    <button ng-hide="requests.markerPlace" ng-click="requests.markerPlaceMode()" class="btn btn-primary btn-side">New Picnic!</button>
+    <h3 ng-hide="requests.markerPlace">{{requests.titleText}}</h3>
+    <button ng-hide="requests.markerPlace" ng-click="requests.markerPlaceMode()" type="button" class="btn btn-lg btn-primary btn-side">New Picnic!</button>
     <div ng-show="requests.markerPlace">
-      <button ng-click="requests.cancelMarkerPlace()" class="btn btn-primary btn-side">Cancel Marker</button>
+    <h3>{{requests.markerText}}</h3>
+      <button ng-click="requests.cancelMarkerPlace()" class="btn btn-lg btn-primary btn-side">Cancel Marker</button>
       <br>
       <br>
-      <h4>{{requests.markerText}}</h4>
+      
     </div>
     <br>
     <div role="form" ng-show="showRequest">
@@ -32,6 +31,4 @@
     </div>
   </div>
   <br>
-  
-  
 </div>

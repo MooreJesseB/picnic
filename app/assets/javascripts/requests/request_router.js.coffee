@@ -6,6 +6,9 @@ class Router
       when "/requests",
         templateUrl: "/request_templates",
         controller: "RequestsCtrl as requests"
+      .when "/requests/:id",
+        templateUrl: "/request_templates/show"
+        controller: "RequestsCtrl as requests"
 
     @locationProvider.html5Mode(true)
 

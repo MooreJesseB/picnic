@@ -12,15 +12,23 @@ class SitesCtrl
   createSession: (newSession) ->
     console.log @Session
     @Session.create newSession
-    this.redirectToRequests()
+      .success (data) =>
+        console.log "data", data
+        this.redirectToUser(data.id)
 
   createUser: (newUser) ->
-    @User.create newUser, (data) ->
-    this.redirectToRequests()
+    @User.create newUser
+      .success (data) =>
+        console.log "data", data
+        this.redirectToUser data.id
 
   redirectToRequests: () ->
     console.log "redirecting to Requests"
     @location.path "/requests"
+
+  redirectToUser: (userId) ->
+    console.log "userId", userId
+    @location.path "/users/#{userId}"
 
   showLogin: () ->
     console.log "login form"

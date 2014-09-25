@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     else
       flash.now[:notice] = "Invalid email or password"
       @user = User.new(email: params[:user][:email])
-      render json: @user_id
+      render json: @user
     end
   end
 

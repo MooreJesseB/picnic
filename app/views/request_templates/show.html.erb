@@ -1,34 +1,14 @@
 <div>
-  <h1 class="text-center">{{title}}</h1>
+  <h1 class="text-center">{{request.currentRequest.title}}</h1>
   <br>  
-  <div class="map-container col-xs-3">
+  <input type="hidden" id="searchTextField" class="form-control" ng-model="address" autofocus>
+  <div class="map-container-small col-xs-3">
     <div id="map-canvas"></div>  
-    <div class="map-footer"></div>
   </div>
-  <!-- <div class="col-xs-3 request-sidebar text-center">
-    <br>
-    <div role="form">
-      <form action="javascript:void(0)" class="search" ng-submit="requests.codeAddress(address)">
-        <input type="text" id="searchTextField" class="form-control" ng-model="address" autofocus>
-        <input type="submit" value="search" class="form-control btm btn-primary">
-      </form>
-      <br>
-    </div>
-    <button ng-hide="requests.markerPlace" ng-click="requests.markerPlaceMode()" class="btn btn-primary btn-side">New Pic Request</button>
-    <div ng-show="requests.markerPlace">
-      <button ng-click="requests.cancelMarkerPlace()" class="btn btn-primary btn-side">Cancel Marker</button>
-      <br>
-      <br>
-      <h4>{{requests.markerText}}</h4>
-    </div>
-    <br>
-    <div role="form" ng-show="showRequest">
-      <form action="javascript:void(0)" ng-submit="requests.createRequest(newRequest)">
-        <input type="text" ng-model="newRequest.title" class="form-control" placeholder="Title" autofocus required>
-        <textarea class="form-control" ng-model="newRequest.description" rows="4" placeholder="Description... ex: Take a photo of the large tree to the northwest" required></textarea>
-        <input type="submit" value="Create Request!" class="btn btn-primary form-control">
-      </form>
-    </div>
-  </div> -->
-  <br>
+  <div class="col-xs-9 map-container-large">
+    
+  </div>
+  <div class="col-xs-3 map-container-small">
+    <p>{{requests.currentRequest.description}}</p>
+  </div>
 </div>

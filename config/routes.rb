@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   get '/logout' => 'sessions#destroy'
 
-  resources :requests, except: [:new, :edit]
+  resources :requests
 
   resources :request_templates
   resources :site_templates
+  resources :user_tempaltes
 
   resources :sites
   resources :passwords
