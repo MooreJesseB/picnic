@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :sites
   resources :passwords
   resources :users
+  resources :photos
 
 end

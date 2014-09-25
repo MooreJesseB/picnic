@@ -4,11 +4,35 @@
   <input type="hidden" id="searchTextField" class="form-control" ng-model="address" autofocus>
   <div class="map-container-small col-xs-3">
     <div id="map-canvas"></div>  
+    <br>
+    <form action="javascript:void(0)">
+      <button class="btn btn-primary form-control" ng-hide="requests.submitPhoto" ng-click="requests.showPhotoSubmit()">Submit new photo!</button>
+    </form>
+    <form action="javascript:void(0)">
+      <button class="btn btn-primary form-control" ng-show="requests.submitPhoto" ng-click="requests.hidePhotoSubmit()">Cancel</button>
+    </form>
+    <br>
+    <div ng-show="requests.submitPhoto">
+      <form action="javascript:void(0)" ng-submit="requests.createPhotoFromUrl(newPhoto)">
+        <input ng-model="newPhoto.imageurl" class="form-control" type="text" placeholder="http://..." autofocus required>
+        <textarea rows="3" ng-model="newPhoto.description" class="form-control" required></textarea>
+        <input class="btn btn-primary form-control" type="submit" value="Submit Url">
+      </form>
+      <h4 class="text-center">Or</h4>
+      <form action="javascript:void(0)"></form>
+        <button class="form-control btn btn-primary">Upload a photo</button>
+      </form>
+
+    </div>
   </div>
-  <div class="col-xs-9 map-container-large">
-    
+  <div class="col-xs-2 map-container-large">
+    <p>{{requests.currentRequest.description}}</p>    
   </div>
-  <div class="col-xs-3 map-container-small">
-    <p>{{requests.currentRequest.description}}</p>
+  <div class="col-xs-7 map-container-large">
+    <div ng-model="requests.photos" ng-repeat="photo in requests.photos">
+      <div class="photos inline-block col-xs-2">
+        <img class="inline-block" src="{{photo.imageurl}}">  
+      </div>
+    </div>
   </div>
 </div>

@@ -7,5 +7,6 @@ angular.module("PicnicApp", [
   "UserFactories",
   "RequestRouter",
   "RequestControllers",
-  "RequestFactories"
+  "RequestFactories",
+  "PhotoFactories"
 ])
