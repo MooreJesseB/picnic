@@ -145,3 +145,11 @@ textarea {
   height: 145px;
   width: 200px;
 }
+
+.footSpacer {
+  height: 100px;
+}
+
+.navButton {
+  opacity: 0;
+}

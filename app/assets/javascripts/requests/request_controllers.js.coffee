@@ -10,7 +10,7 @@ class RequestsCtrl
     @root.location = @location
     # scope variable initializations
     @markerText = ""
-    @titleText = "Select an existing Picnic from the map or make a\n\u2193"
+    @titleText = "Select an existing Picniq from the map or make a\n\u2193"
     @markerPlace = false
     @scope.showRequest = false
     @requestsShow = false

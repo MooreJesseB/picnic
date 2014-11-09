@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Picnic</title>
+    <title>Picniq</title>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWrANfILn42LmB9bs6mS1Uoe-KWSEaDv0&libraries=places"></script>
     <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -20,11 +20,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">Picnic</a>
+            <a class="navbar-brand" ng-click="sites.redirectToHome()">Picniq</a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="">Home</a></li>
+              <li><a href="" ng-click="sites.redirectToHome()">Home</a></li>
               <li><a href="">About</a></li>
               <li><a href="">Contact</a></li>
             </ul>
@@ -32,23 +32,17 @@
         </div>
       </div>
       <div class="spacer"></div>
-      <!-- <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="">Brand</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        </div>
-      </nav> -->
 
       <div class="container">
         
-        <br>
-      
-        <div ng-view>  
+          <br>
+        
+          <div ng-view>  
         
         </div>
-
+    
       </div>
+      <div class="footSpacer"></div>
 
     </body>
 

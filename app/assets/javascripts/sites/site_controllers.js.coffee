@@ -30,6 +30,10 @@ class SitesCtrl
     console.log "userId", userId
     @location.path "/users/#{userId}"
 
+  redirectToHome: ->
+    console.log "going home"
+    @location.path "/"
+
   showLogin: () ->
     console.log "login form"
     @login = true
