@@ -31,4 +31,4 @@ Premise:
  - Amazon S3 web storage
  
 ##Where to find it##
-You can find the (incomplete) deployed version at [Picniq]("http://picniq.herokuapp.com/")
+You can find the (incomplete) deployed version at [Picniq]("http://picniq.herokuapp.com")
